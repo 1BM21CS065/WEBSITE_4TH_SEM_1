@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.content-container {
+    background-image: url("https://img.freepik.com/premium-photo/blurred-interior-hospital-clinical-with-people-abstract-medical-background_1484-1309.jpg?w=2000");
+    background-size: cover;
+    height: 150%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.content-container1 {
+    background-image: url("https://img.freepik.com/premium-photo/blurred-interior-hospital-clinical-with-people-abstract-medical-background_1484-1309.jpg?w=2000");
+    background-size: cover;
+    height:100vh;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.department-container {
+    border-radius: 15px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 60%;
+}
+
+.image {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 20%;
+    width: 60%;
+}
+
+.head {
+    font-size: 40px;
+    margin: 15px;
+    color: orange;
+    font-weight: bold;
+}
+
+.para {
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.button {
+    background-color: white;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    border-color: orange;
+    border-width: 3px;
+    margin: 10px;
+}

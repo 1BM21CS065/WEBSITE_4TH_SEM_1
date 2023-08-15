@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F3E5F5;
+      }
+      
+      .header {
+        background-color: #1565C0;
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
+      
+      .header h1 {
+        font-size: 42px;
+        margin-bottom: 30px;
+      }
+      
+      .header p {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      
+      .services {
+        background-color: #BBDEFB;
+        padding: 50px;
+        text-align: center;
+      }
+      
+      .services h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
+      
+      .services .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .services .card {
+        width: 30%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        padding: 40px;
+        text-align: center;
+        transition: 0.3s;
+      }
+      
+      .services .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px);
+      }
+      
+      .services .card h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      
+      .services .card p {
+        font-size: 18px;
+        text-align: justify;
+        margin: 20px;
+      }
+      
+      .services .card img {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      
+      .footer {
+        background-color: #1565C0;
+        color: white;
+        text-align: center;
+        padding: 50px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .footer p {
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Radiology Laboratory</h1>
+      <p>High-quality Radiology tests at the Hospitals suggested by us assured!</p>
+    </div>
+    <div class="services">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" alt="CBC">
+          <h3>X-Rays</h3>
+          <p>An X-ray is a quick, painless test that produces images of the structures inside your body — particularly your bones.
+
+            X-ray beams pass through your body, and they are absorbed in different amounts depending on the density of the material they pass through. Dense materials, such as bone and metal, show up as white on X-rays. The air in your lungs shows up as black. Fat and muscle appear as shades of gray.
+            
+            For some types of X-ray tests, a contrast medium — such as iodine or barium — is introduced into your body to provide greater detail on the images.</p>
+        </div>
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" alt="Liver Function Test">
+          <h3>CT-Scan</h3>
+          <p>A CT scan is a diagnostic imaging test that creates images of the inside of the body using X-ray technology. It displays precise pictures of every portion of the body, including the bones, muscles, organs, and blood vessels, and also diagnoses tumours, internal bleeding, or checks for other internal injuries or damage.
+        </p>
+        </div>
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" alt="Renal Function Test">
+          <h3>MRI</h3>
+          <p>Magnetic resonance imaging (MRI) is a type of scan that uses strong magnetic fields and radio waves to produce detailed images of the inside of the body. An MRI scanner is a large tube that contains powerful magnets. You lie inside the tube during the scan.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

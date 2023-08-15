@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signup</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" id="email" placeholder="Email" class="input">
+                    </div>
+                    <div class="field input-field">
+                        <input type="Password" id="password" placeholder="Password" class="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+                    <div class="form-link">
+
+                    </div>
+                    <div class="field button-field">
+                        <button onclick="auth()">Login</button>
+                    </div>
+                    <div class="form-link">
+                        <span>Don't have an account?<a href="#" class="link signup-link">Sign-up</a></span>
+                    </div>
+                </form>
+            </div>
+            <script>
+                function auth() {
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+                    var mailAr = [];
+                    var pswAr = [];
+                    const apiUrl = 'http://localhost/api_loginpage.php/signup';
+
+
+                    let options = {
+                            method: "GET"
+                        };
+  
+                    fetch(apiUrl, options)
+                        .then(function(response) {
+                        return response.json();
+                        })
+                        .then(function(jsonData) {
+                            for(let item of jsonData)
+                            {
+                                mailAr.push(item['mail_id']);
+                                pswAr.push(item['psw']);
+                            }
+
+                            let itemIndex = mailAr.findIndex(function (eachItem) {
+                                if (eachItem === email) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            });
+
+                            if(itemIndex!==-1)
+                            {
+                                if(pswAr[itemIndex]===password)
+                                {
+                                    alert("Logged in successfully");
+                                    window.location.href = "http://localhost/WEB_DEV/login_continue/login_continue.html";
+                                }
+                                else 
+                                {
+                                    alert("Wrong password");
+                                }
+                            }
+                            else 
+                            {
+                                alert("Incorrect EMAIL ID");
+                            }
+                        });
+                }
+            </script>
+        </div>
+
+        <!--signup form-->
+
+        <div class="form signup">
+            <div class="form-content">
+                <header>Signup</header>
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" id="mail" name="mail" required>
+                </div>
+                <div class="field input-field">
+                    <input type="password" placeholder="Create Password" class="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="psw" required>
+                </div>
+                <div class="field input-field">
+                    <input type="password" placeholder="Confirm Password" class="password" id="cpsw" name="cpsw" required>
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="field button-field">
+                    <button id="button">
+                        Signup
+                    </button>
+                </div>
+                <div class="form-link">
+                    <span>Already have an account?<a href="#" class="link login-link">login</a></span>
+                </div>
+            </div>
+
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+
+
+
+    </section>
+
+    <!--javascript-->
+    <script src="admin_login.js"></script>
+
+
+
+
+</body>
+
+</html>

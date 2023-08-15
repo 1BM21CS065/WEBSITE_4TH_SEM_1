@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegForm</title>
+</head>
+<link rel="stylesheet" href="registration.css">
+</style>
+
+<body id="body">
+    <script src="registration.js"></script>
+    <form  action="connect.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <div  class="cont">
+        <div id ="form" class="head">
+             <h2>Registration Form</h2>
+            </div>
+            <div class="pp">
+                
+                <p>Please fill out the information form below to join. Fields marked with a red star are mandatory</p>
+            </div>
+        <div class="name">
+            <label>Customer Name
+            </label>
+            <div class="in">
+
+                <select required>
+                    <option value="">Title</option>
+                    <option value="">Ms</option>
+                    <option value="">Miss</option>
+                    <option value="">Mr</option>
+                    <option value="">Mrs</option>
+                </select>
+                <div class="formdesign" id="name">
+                <input type="text" name="fname" required> <b><span class="formerror"> </span></b>
+                </div>
+        
+            </div>
+        </div>
+        <div class="address">
+            <label>Customer Address
+            </label>
+            <div class="in">
+
+                <input type="text" placeholder="Street Address" required name="street_address"> </input> 
+                <div>
+                    <input type="text" placeholder="City" required name="city"> </input> 
+                    <input type="text" placeholder="State" required name="state"> </input>
+                </div> 
+                <input type="text" placeholder="Postal/zip code" required name="postal"> </input> 
+                <input type="text" placeholder="Country" required name="country"> </input> 
+                
+            </div>
+        </div>
+        <div class="contact">
+  <label for="">Customer Phone</label>
+  <div class="formdesign" id="phone">
+    <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+    <input type="phone" name="phone_number_2" required><b><span class="formerror"></span></b>
+</div>
+
+    </div>
+<div class="dobm">
+
+    <div class="">
+        <label for="Date of birth">Date of birth</label>
+       <div class="in">
+
+           <input type="date" placeholder=""  name="date" required>
+        </div>
+    </div>
+    <label for="Email">Email Id</label>
+    <div class="formdesign" id="email">
+           <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+    </div>
+
+</div>
+<p>All customer information will be kept with descretion and will not be used for other marketing or advertisment purposes without customer approval</p>
+<div class="in">
+    <input type="checkbox" required>I allow my information to be used for future campaigns </input>
+</div>
+
+    <div class="btnn">
+        <button class="btn">Register Now!</button>
+    </div>
+</div>
+</form>
+    
+</body>
+</html>

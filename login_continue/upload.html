@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    
+
+    <!-- HTML form for image upload -->
+    <div class="form_custom">
+        <form enctype="multipart/form-data">
+            <div style="margin-bottom:15px">
+                <label for="email" class="mb-3">Email-Id:</label>
+                <input type="text" name="email" id="emailID" required><br>
+            </div>
+            <div style="margin-bottom:15px">
+                <label for="image" class="mb-3">Select Image:</label>
+                <input type="file" name="image" id="imgID" required><br>
+            </div>
+            <button onclick="upload()">Submit</button>
+            <!--<input type="submit" onclick="upload()" name="submit" value="Upload">-->
+        </form>
+    </div>
+</body>
+</html>

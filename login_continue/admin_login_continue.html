@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <style>
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      width: 160px;
+      font-size:40px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      color: black;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
+    </style>
+	<title>CSS User Profile Card</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+<h1 style="color:#e4aa08;font-size:40px;padding:15px;">NewLife</h1>
+
+<div class="wrapper">
+    <div class="left">
+        <img src="https://i.pinimg.com/originals/75/84/04/758404ebc522ce0beff7f02e59fdaf47.jpg" 
+        alt="user" width="100">
+        <h4>Name</h4>
+        <p>Leo</p>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>admin@gmail.com</p>
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>0001-213-998761</p>
+              </div>
+            </div>
+        </div>
+      
+      <div class="projects">
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Recent</h4>
+                 </div>
+                 <div class="data">
+              </div>
+            </div>
+        </div>
+      
+        <div class="social_media">
+            <ul>
+              <!--<li><a href="http://localhost/WEB_DEV/login_continue/upload.html">Upload</a></li>-->
+              <li>
+                <div class="dropdown">
+                  <a href="">Depts.</a>
+                  <div class="dropdown-content">
+                    <a href="http://localhost/WEB_DEV\departments\dept(Bio-engineering).html">Bio-Engineering</a>
+                    <a href="http://localhost/WEB_DEV\departments\dept(Cardiology).html">Cardiology </a>
+                    <a href="http://localhost/WEB_DEV\departments\dept(dentistry).html">Dentistry </a>
+                    <a href="http://localhost/WEB_DEV\departments\dept(Pharmacology).html">Pharmacology </a>
+                    <a href="http://localhost/WEB_DEV\departments\depts(endocrinology).html">Endocrinology </a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="http://localhost/WEB_DEV/labs/laboratories.html">Labs</a></li>
+              <!--<li><a href="http://localhost/WEB_DEV/chatbox,payment,response_sheet/payment.html">Pay Bills</a></li>-->
+              <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&db=hospital_database">Database</a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>

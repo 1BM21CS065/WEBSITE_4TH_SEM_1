@@ -28,9 +28,6 @@ jobs:
           php -r "unlink('composer-setup.php');"
           mv composer.phar /usr/local/bin/composer
 
-      - name: Install PHP Dependencies
-        run: composer install
-
       - name: Start XAMPP
         run: lampp start
 

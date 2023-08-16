@@ -29,10 +29,10 @@ jobs:
           mv composer.phar /usr/local/bin/composer
 
       - name: Start XAMPP
-        run: lampp start
+        run: sudo lampp start
 
       - name: Stop XAMPP
-        run: lampp stop
+        run: sudo lampp stop
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9

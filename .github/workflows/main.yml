@@ -16,10 +16,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
-          wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.4/xampp-linux-x64-8.2.4-0-installer.run
-          chmod +x xampp-linux-x64-8.2.4-0-installer.run
-          ./xampp-linux-x64-8.2.4-0-installer.run
-          ln -s /opt/lampp/lampp /usr/local/bin/lampp
+          sudo wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.4/xampp-linux-x64-8.2.4-0-installer.run
+          sudo chmod +x xampp-linux-x64-8.2.4-0-installer.run
+          sudo ./xampp-linux-x64-8.2.4-0-installer.run
+          sudo ln -s /opt/lampp/lampp /usr/local/bin/lampp
 
       - name: Install Composer
         run: |

@@ -63,7 +63,7 @@ function checkPassword() {
         })
         .then(function(jsonData) {
           console.log(jsonData);
-          window.location.assign("http://localhost/WEB_DEV/registration/registration.html");
+          window.location.assign("../registration/registration.html");
           alert("Login Successfully");
         });
     }

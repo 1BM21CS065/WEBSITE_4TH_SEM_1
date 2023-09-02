@@ -41,13 +41,13 @@ jobs:
           password: "#GaMa0230"
       
       - name: Build Docker Image
-        run: docker build -t devops .
+        run: docker build -t webd .
         
       - name: Tag Docker Image
-        run: docker tag devops:latest gamanayr/devops:latest
+        run: docker tag webd:latest gamanayr/webd:latest
       
       - name: Push Docker Image
-        run: docker push gamanayr/devops:latest
+        run: docker push gamanayr/webd:latest
 
       - name: Run Docker Container
-        run: docker run -d -p 80:80 gamanayr/devops:latest
+        run: docker run -d -p 80:80 gamanayr/webd:latest

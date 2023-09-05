@@ -21,7 +21,7 @@ jobs:
 
                               
     - name: Build Docker image
-      run: docker build -t website_4th_sem_1-php-env .
+      run: docker build -t website_4th_sem_1-php-env:latest .
 
     - name: Run Docker Compose
       run: docker-compose up --build -d

@@ -24,7 +24,7 @@ jobs:
       run: docker build -t my-php-app .
 
     - name: Run Docker Compose
-      run: docker-compose up --build
+      run: docker-compose up --build -d
 
     - name: Wait for services to start
       run: sleep 10  # Adjust the wait time as needed

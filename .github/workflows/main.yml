@@ -28,14 +28,6 @@ jobs:
 
     - name: Wait for services to start
       run: sleep 10  # Adjust the wait time as needed
-
-    - name: Run unit tests
-      run: |
-        # Add your unit test command here
-        # For example, if you are using PHPUnit:
-        docker exec 98f3f4f26310 ps aux
-    - name: Tag Docker Image
-      run: docker tag website_4th_sem_1-php-env:latest gamanayr/website_4th_sem_1-php-env:latest
       
     - name: Push Docker Image
       run: docker push gamanayr/website_4th_sem_1-php-env:latest

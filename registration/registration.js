@@ -1,6 +1,5 @@
 let container = document.getElementById("body");
-let form = document.getElementById("form");
-let name = document.getElementById("name");
+
 
 body.style.backgroundImage = "url('https://img.freepik.com/premium-photo/blurred-interior-hospital-clinical-with-people-abstract-medical-background_1484-1309.jpg?w=2000')";
 function clearErrors(){
@@ -19,8 +18,9 @@ function seterror(id, error){
     element.getElementsByClassName('formerror')[0].innerHTML = error;
 
 }
-
+//['myForm']
 function validateForm(){
+    //event.preventDefault();
     var returnval = true;
     clearErrors();
 
@@ -42,7 +42,7 @@ function validateForm(){
     }
 
     var email = document.forms['myForm']["femail"].value;
-    if (email.length>35){
+    if (email.length>15){
         seterror("email", "*Email length is too long");
         returnval = false;
     }
@@ -61,7 +61,57 @@ function validateForm(){
         returnval = false;
     }
 
+    var street = document.forms['myForm']["street_address"].value;
+    var city = document.forms['myForm']["city"].value;
+    var state = document.forms['myForm']["state"].value;
+    var postal = document.forms['myForm']["postal"].value;
+    var country = document.forms['myForm']["country"].value;
+    var date = document.forms['myForm']["date"].value;
 
+    console.log(returnval);
 
-    return returnval;
+    if(returnval)
+    {
+        // API endpoint URL
+        const apiUrl = 'http://localhost/api_registration.php/registration';
+
+        let data = {
+            email:email,
+            name:name,
+            street:street,
+            city:city,
+            state:state,
+            postal:postal,
+            country:country,
+            pnum1:phone,
+            pnum2:phone,
+            date:date
+        };
+        
+        let options = {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            },
+            body: JSON.stringify(data)
+        };
+        
+        fetch(apiUrl, options)
+            .then(function(response) {
+            return response;
+            })
+            .then(function(jsonData) {
+            console.log(jsonData);
+            console.log(jsonData.response);
+            window.location.assign("http://localhost/login_page/loginpage.html");
+            alert("end");
+            });
+    }
+
+    window.location.href = "http://localhost/login_page/loginpage.html";
+
 }
+
+
+document.forms.addEventListener("submit",validateForm);

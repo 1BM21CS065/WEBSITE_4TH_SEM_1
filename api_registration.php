@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost';
+$host = 'mysqlidb';
 $username = 'root';
-$password = '';
-$database = 'hospital_database';
+$password = 'root';
+$database = 'hpdb';
 
 // Create a database connection
 $connection = new mysqli($host, $username, $password, $database);
@@ -14,7 +14,7 @@ if ($connection->connect_error) {
 }
 
 // Define the endpoint
-$endpoint = '/WEB_DEV/api_registration.php/registration';
+$endpoint = 'http://localhost/api_registration.php/registration';
 
 
 // Handle the request

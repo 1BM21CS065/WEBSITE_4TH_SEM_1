@@ -17,19 +17,19 @@ jobs:
       uses: docker/login-action@v1
       with: 
           username: gamanayr
-          password: "#GaMa0230"
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Build and Push PHP-Env image
       run: |
         docker build -t gamanayr/website_4th_sem_1-php-env php-env .
-        docker push gamanayr/php-env
+        docker push gamanayr/website_4th_sem_1-php-env
 
     - name: Build and Push MySQL-DB image
       run: |
         docker build -t gamanayr/website_4th_sem_1-mysqlidb mysqlidb .
-        docker push gamanayr/mysqlidb
+        docker push gamanayr/website_4th_sem_1-mysqlidb
 
     - name: Build and Push PHPMyAdmin image
       run: |
         docker build -t gamanayr/website_4th_sem_1-phpmyadmin phpmyadmin .
-        docker push gamanayr/phpmyadmin
+        docker push gamanayr/website_4th_sem_1-phpmyadmin

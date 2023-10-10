@@ -21,15 +21,13 @@ jobs:
 
     - name: Build and Push PHP-Env image
       run: |
-        docker build -t gamanayr/website_4th_sem_1-php-env php-env .
+        docker build -t gamanayr/website_4th_sem_1-php-env .
         docker push gamanayr/website_4th_sem_1-php-env
-
     - name: Build and Push MySQL-DB image
       run: |
-        docker build -t gamanayr/website_4th_sem_1-mysqlidb mysqlidb .
+        docker build -t gamanayr/website_4th_sem_1-mysqlidb .
         docker push gamanayr/website_4th_sem_1-mysqlidb
-
     - name: Build and Push PHPMyAdmin image
       run: |
-        docker build -t gamanayr/website_4th_sem_1-phpmyadmin phpmyadmin .
+        docker build -t gamanayr/website_4th_sem_1-phpmyadmin .
         docker push gamanayr/website_4th_sem_1-phpmyadmin
